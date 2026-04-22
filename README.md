@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ### 2 — Execute the pipeline
 
 ```bash
-python run.py \
+python3 run.py \
   --input    data.csv    \
   --config   config.yaml \
   --output   metrics.json \
