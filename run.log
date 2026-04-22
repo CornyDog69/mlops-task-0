@@ -1,0 +1,17 @@
+2026-04-22T13:15:38  INFO      pipeline — === Pipeline starting ===
+2026-04-22T13:15:38  DEBUG     pipeline — CLI args: {'input': 'data.csv', 'config': 'config.yaml', 'output': 'metrics.json', 'log_file': 'run.log'}
+2026-04-22T13:15:38  INFO      pipeline — Loading config from 'config.yaml'.
+2026-04-22T13:15:38  DEBUG     pipeline — Config loaded — seed=42  window=5  version=v1
+2026-04-22T13:15:38  INFO      pipeline — NumPy random seed set to 42.
+2026-04-22T13:15:38  INFO      pipeline — Loading OHLCV data from 'data.csv'.
+2026-04-22T13:15:38  DEBUG     pipeline — Raw CSV shape: (10000, 1)  columns: ['timestamp,open,high,low,close,volume_btc,volume_usd']
+2026-04-22T13:15:38  WARNING   pipeline — CSV appears to have extra row-level quoting; re-parsing with QUOTE_NONE.
+2026-04-22T13:15:38  DEBUG     pipeline — Re-parsed CSV shape: (10000, 7)  columns: ['"timestamp', 'open', 'high', 'low', 'close', 'volume_btc', 'volume_usd"']
+2026-04-22T13:15:38  DEBUG     pipeline — Renamed column 'volume_btc' → 'volume'.
+2026-04-22T13:15:38  INFO      pipeline — Data loaded: 10000 rows, 7 columns.
+2026-04-22T13:15:38  INFO      pipeline — Computing 5-period rolling mean on 'close'.
+2026-04-22T13:15:38  DEBUG     pipeline — Signal distribution — bullish: 4989 (49.9%)  neutral/bearish: 5011 (50.1%)
+2026-04-22T13:15:38  INFO      pipeline — Primary metric — signal_rate: 0.4989
+2026-04-22T13:15:38  INFO      pipeline — Pipeline completed in 19.3 ms.
+2026-04-22T13:15:38  INFO      pipeline — Status: success
+2026-04-22T13:15:38  INFO      pipeline — Metrics written to 'metrics.json'.

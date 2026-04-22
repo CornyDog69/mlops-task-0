@@ -1,0 +1,9 @@
+# Pipeline configuration
+
+# seed    : integer — NumPy random seed for full reproducibility
+# window  : integer — rows for the rolling mean
+# version : string  — pipeline version written to metrics.json
+ 
+seed: 42
+window: 5
+version: "v1"
